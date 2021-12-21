@@ -1,0 +1,2 @@
+# Pages
+Required directory

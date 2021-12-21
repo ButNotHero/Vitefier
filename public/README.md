@@ -1,0 +1,2 @@
+# Public dir
+Required directory
