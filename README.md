@@ -1,3 +1,7 @@
+# Vitefier
+
+Vite SSR template.
+
 ## Included
 - i18n
 - Windi CSS
