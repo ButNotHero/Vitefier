@@ -2,6 +2,10 @@
 
 Vite SSR template.
 
+## Packages install
+- Install packages in root directory
+- Install packages in _app/server directory
+
 ## Included
 - i18n
 - Windi CSS
@@ -17,6 +21,7 @@ Vite SSR template.
 - Commitlint
 - Axios
 - Pinia
+- Node server
 
 ## Usage
 
