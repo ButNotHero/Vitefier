@@ -1,0 +1,6 @@
+@mixin header-border {
+  @apply py-20px m-0 border-header;
+
+  margin-bottom: 30px;
+  border-bottom-width: 1px;
+}

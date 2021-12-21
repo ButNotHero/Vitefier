@@ -1,0 +1,18 @@
+# Ignore artifacts:
+static
+dist
+coverage
+build
+node_modules
+core
+serverless
+public
+fonts
+font
+
+# Ignore all HTML files:
+*.html
+
+# Some files
+auto-imports.d.ts
+components.d.ts
