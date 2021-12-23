@@ -23,6 +23,7 @@ onMounted(() => {
     .home__wrap.mt-10
       p.home__text Count: {{ rootStore.count }}
       button.mt-4.bg-gray-200.px-10px.py-4px(@click='rootStore.increase()') Increase count
+    button.mt-4.bg-gray-200.px-10px.py-4px(@click='rootStore.resetState()') Reset count store
 </template>
 
 <route lang="yml">
