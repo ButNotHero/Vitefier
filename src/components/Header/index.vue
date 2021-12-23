@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { useLocale } from '@/use/useLocale';
-import { useTheme } from '@/use/useTheme';
+import { useLocale } from '@/use/_root/useLocale';
+import { useTheme } from '@/use/_root/useTheme';
 
 const locale = useLocale();
 const theme = useTheme();
