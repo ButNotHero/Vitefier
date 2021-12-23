@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import { useTheme } from '@/use/_root/useTheme';
-import { useLocale } from '@/use/_root/useLocale';
+import { useTheme, useLocale } from '@/use/_root';
 
 const theme = useTheme();
 const locale = useLocale();
@@ -13,10 +12,6 @@ useHead({
   title: 'SSR Title',
   meta: [{ name: 'description', content: 'Шаблон SSR' }],
 });
-
-// watch(theme.isDark, (v) => theme.watchCallback(v), {
-//   immediate: true,
-// });
 </script>
 
 <template lang="pug">
