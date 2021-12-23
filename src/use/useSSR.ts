@@ -1,15 +1,22 @@
-import { onServerPrefetch } from 'vue-demi';
+interface IUseSSR {
+  isInit: boolean;
+  isError: boolean;
+}
 
-export const useSSR = async (callback): Promise<boolean> => {
+export const useSSR = (callback: () => void): IUseSSR => {
   const isInit = ref(false);
+  const isError = ref(false);
 
   const init = async () => {
     try {
+      isError.value = false;
       await callback();
       isInit.value = true;
     } catch (e) {
+      console.error('useSSR callback error');
       console.error(e);
       isInit.value = false;
+      isError.value = true;
     }
   };
 
@@ -21,5 +28,8 @@ export const useSSR = async (callback): Promise<boolean> => {
     if (!isInit.value) await init();
   });
 
-  return isInit.value;
+  return {
+    isInit: isInit.value,
+    isError: isError.value,
+  };
 };
