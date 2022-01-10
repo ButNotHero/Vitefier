@@ -1,18 +1,11 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "private": true,
   "engines": {
     "node": ">=14",
     "yarn": "^1.22.17"
   },
   "scripts": {
     "production": "cross-env NODE_ENV=production node main.js"
-  },
-  "dependencies": {
-    "node-fetch": "^2.6.6",
-    "express": "^4.17.1",
-    "fs-extra": "^10.0.0",
-    "ts-node": "^10.4.0"
   }
 }

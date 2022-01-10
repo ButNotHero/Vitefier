@@ -1,9 +1,6 @@
 const path = require('path');
-const nodeFetch = require('node-fetch');
+global.fetch = require('node-fetch');
 const express = require('express');
-
-// @ts-ignore
-global.fetch = nodeFetch;
 
 const dist = '../dist';
 
@@ -33,7 +30,7 @@ for (const asset of assets || []) {
   );
 }
 
-server.get('*', async (request, response) => {
+server.get('*', async (request, response, next) => {
   try {
     const url = `${request.protocol}://${request.get('host')}${request.originalUrl}`;
 
